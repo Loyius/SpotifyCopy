@@ -1,0 +1,21 @@
+{
+  "name": "spotifyhashtag",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix back-end && npm install --prefix front-end/Spotify-copy && npm run build --prefix front-end/Spotify-copy",
+    "start": "npm run start --prefix back-end"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Loyius/SpotifyCopy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Loyius/SpotifyCopy/issues"
+  },
+  "homepage": "https://github.com/Loyius/SpotifyCopy#readme",
+  "description": ""
+}
