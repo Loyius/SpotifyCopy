@@ -1,5 +1,5 @@
-import { artistsArray } from "../../front-end/Spotify-copy/src/assets/database/artists.js";
-import { songsArray } from "../../front-end/Spotify-copy/src/assets/database/songs.js";
+import { artistsArray } from "../../front-end/src/assets/database/artists.js";
+import { songsArray } from "../../front-end/src/assets/database/songs.js";
 import { db } from "./connect.js";
 
 const newArtistsArray = artistsArray.map((currentArtistObj) => {

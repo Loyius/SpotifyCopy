@@ -3,33 +3,32 @@ import ItemList from "./ItemList";
 import { artistsArray } from "../assets/database/artists";
 import { songsArray } from "../assets/database/songs";
 
-const Main = ({ type }) => {
+const Main = ({ type = "both" }) => {
+  const shouldShowArtists = type === "artists" || type === "both";
+  const shouldShowSongs = type === "songs" || type === "both";
+
   return (
     <div className="main">
       {/* Item List de Artistas */}
-      {type === "artists" || type === undefined ? (
+      {shouldShowArtists && (
         <ItemList
           title="Artistas"
-          items={10}
+          items={5}
           itemsArray={artistsArray}
           path="/artists"
           idPath="/artist"
         />
-      ) : (
-        <></>
       )}
 
       {/* Item List de Músicas */}
-      {type === "songs" || type === undefined ? (
+      {shouldShowSongs && (
         <ItemList
           title="Músicas"
-          items={20}
+          items={10}
           itemsArray={songsArray}
           path="/songs"
           idPath="/song"
         />
-      ) : (
-        <></>
       )}
     </div>
   );

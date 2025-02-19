@@ -8,20 +8,28 @@ import { songsArray } from "../assets/database/songs";
 
 const Artist = () => {
   const { id } = useParams();
-  // console.log(useParams());
 
-  const { name, banner } = artistsArray.filter(
+  // Encontrando o artista pelo ID, utilizando find para um único item ou undefined
+  const artist = artistsArray.find(
     (currentArtistObj) => currentArtistObj._id === id
-  )[0];
+  );
 
+  // Verificando se o artista foi encontrado
+  if (!artist) {
+    return <p>Artista não encontrado</p>;
+  }
+
+  const { name, banner } = artist;
+
+  // Filtrando as músicas do artista
   const songsArrayFromArtist = songsArray.filter(
     (currentSongObj) => currentSongObj.artist === name
   );
 
-  const randomIndex = Math.floor(
-    Math.random() * (songsArrayFromArtist.length - 1)
-  );
-  const randomIdFromArtist = songsArrayFromArtist[randomIndex]._id;
+  // Gerando um índice aleatório corretamente dentro do intervalo
+  const randomIndex = Math.floor(Math.random() * songsArrayFromArtist.length);
+  const randomIdFromArtist = songsArrayFromArtist[randomIndex].id;
+
   return (
     <div className="artist">
       <div
@@ -35,7 +43,6 @@ const Artist = () => {
 
       <div className="artist__body">
         <h2>Populares</h2>
-
         <SongList songsArray={songsArrayFromArtist} />
       </div>
 
