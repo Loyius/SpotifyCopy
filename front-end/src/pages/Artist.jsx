@@ -3,32 +3,31 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
 import { Link, useParams } from "react-router-dom";
 import SongList from "../components/SongList";
-import { artistsArray } from "../assets/database/artists";
+import { artistArray } from "../assets/database/artists";
 import { songsArray } from "../assets/database/songs";
 
 const Artist = () => {
   const { id } = useParams();
+  // console.log(useParams());
 
-  // Encontrando o artista pelo ID, utilizando find para um único item ou undefined
-  const artist = artistsArray.find(
+  const { name, banner } = artistArray.filter(
     (currentArtistObj) => currentArtistObj._id === id
-  );
+  )[0];
 
-  // Verificando se o artista foi encontrado
-  if (!artist) {
-    return <p>Artista não encontrado</p>;
-  }
-
-  const { name, banner } = artist;
-
-  // Filtrando as músicas do artista
   const songsArrayFromArtist = songsArray.filter(
     (currentSongObj) => currentSongObj.artist === name
   );
 
-  // Gerando um índice aleatório corretamente dentro do intervalo
-  const randomIndex = Math.floor(Math.random() * songsArrayFromArtist.length);
-  const randomIdFromArtist = songsArrayFromArtist[randomIndex].id;
+  const randomIndex = Math.floor(
+    Math.random() * (songsArrayFromArtist.length - 1)
+  );
+  const randomIdFromArtist = songsArrayFromArtist[randomIndex]._id;
+
+  // console.log(randomIdFromArtist);
+  // console.log(Math.floor(Math.random() * (songsArrayFromArtist.length - 1)));
+  // console.log("Tamanho do Array:" + songsArrayFromArtist.length);
+
+  // console.log(songsArrayFromArtist);
 
   return (
     <div className="artist">
@@ -43,6 +42,7 @@ const Artist = () => {
 
       <div className="artist__body">
         <h2>Populares</h2>
+
         <SongList songsArray={songsArrayFromArtist} />
       </div>
 

@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const SongItem = ({ image, name, duration, _id, index }) => {
+const SongItem = ({ image, name, duration, artist, audio, _id, index }) => {
   return (
     <Link to={`/song/${_id}`} className="song-item">
       <div className="song-item__number-album">
-        <p className="song-item__index">{index + 1}</p>
+        <p>{index + 1}</p>
 
         <div className="song-item__album">
           <img
@@ -13,11 +13,12 @@ const SongItem = ({ image, name, duration, _id, index }) => {
             alt={`Imagem da Música ${name}`}
             className="song-item__image"
           />
+
           <p className="song-item__name">{name}</p>
         </div>
       </div>
 
-      <p className="song-item__duration">{duration}</p>
+      <p>{duration}</p>
     </Link>
   );
 };

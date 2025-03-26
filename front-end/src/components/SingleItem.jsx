@@ -15,7 +15,7 @@ const SingleItem = ({ _id, name, image, banner, artist, idPath }) => {
           />
         </div>
 
-        <FontAwesomeIcon className="single-item__icon" icon={faCirclePlay} />
+        <FontAwesomeIcon className="single-item__icon " icon={faCirclePlay} />
       </div>
 
       <div className="single-item__texts">
@@ -23,7 +23,7 @@ const SingleItem = ({ _id, name, image, banner, artist, idPath }) => {
           <p className="single-item__title">{name}</p>
         </div>
 
-        <p className="single-item__type">{artist || "Artista desconhecido"}</p>
+        <p className="single-item__type">{artist ?? "Artista"}</p>
       </div>
     </Link>
   );
