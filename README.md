@@ -1,8 +1,7 @@
 # 🎵 Spotify Clone
 
 ##  Descrição do Projeto
-Este projeto é uma aplicação web que replica a interface e funcionalidades do Spotify, desenvolvida com tecnologias modernas de desenvolvimento web.
-
+Este projeto é uma aplicação web que replica a interface e funcionalidades do Spotify
 ##  Tecnologias Utilizadas
 
 ### Principais Tecnologias
