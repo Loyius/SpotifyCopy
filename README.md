@@ -11,11 +11,7 @@ Este projeto é uma aplicação web que replica a interface e funcionalidades do
 - **Node.js**: Ambiente de execução JavaScript para back-end
 - **Express**: Framework web para criação de APIs
 - **MongoDB**: Banco de dados NoSQL para armazenamento de dados
-
-### Bibliotecas e Ferramentas
 - **Axios**: Cliente HTTP para requisições de API
-- **Mongoose**: ODM (Object Data Modeling) para MongoDB
-- **Tailwind CSS**: Framework de estilos utilitário
 
 ##  Arquitetura do Projeto
 
@@ -33,7 +29,7 @@ Este projeto é uma aplicação web que replica a interface e funcionalidades do
 ##  Configuração e Instalação
 
 ### Pré-requisitos
-- Node.js (v14 ou superior)
+- Node.js
 - MongoDB
 - npm ou yarn
 
@@ -45,15 +41,6 @@ Este projeto é uma aplicação web que replica a interface e funcionalidades do
    cd SpotifyCopy
    ```
 
-2. **Instale as dependências**
-   ```
-   # Instalar dependências do back-end
-   npm install --prefix back-end
-
-   # Instalar dependências do front-end
-   npm install --prefix front-end
-   ```
-
 4. **Inicie o servidor back-end**
    ```
    npm run start --prefix back-end
@@ -61,5 +48,6 @@ Este projeto é uma aplicação web que replica a interface e funcionalidades do
 
 5. **Inicie o servidor front-end**
    ```
+   npm run build --prefix front-end
    npm run dev --prefix front-end
    ```
