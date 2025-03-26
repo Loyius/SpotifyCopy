@@ -1,9 +1,9 @@
 # 🎵 Spotify Clone
 
-## 📝 Descrição do Projeto
+##  Descrição do Projeto
 Este projeto é uma aplicação web que replica a interface e funcionalidades do Spotify, desenvolvida com tecnologias modernas de desenvolvimento web.
 
-## 🚀 Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 ### Principais Tecnologias
 - **React**: Biblioteca para construção de interfaces de usuário dinâmicas
@@ -17,7 +17,7 @@ Este projeto é uma aplicação web que replica a interface e funcionalidades do
 - **Mongoose**: ODM (Object Data Modeling) para MongoDB
 - **Tailwind CSS**: Framework de estilos utilitário
 
-## 🏗️ Arquitetura do Projeto
+##  Arquitetura do Projeto
 
 ### Front-end
 - Desenvolvido com React e Vite
@@ -30,7 +30,7 @@ Este projeto é uma aplicação web que replica a interface e funcionalidades do
 - Conexão com MongoDB para persistência de dados
 - Endpoints RESTful para gerenciamento de músicas e artistas
 
-## 🔧 Configuração e Instalação
+##  Configuração e Instalação
 
 ### Pré-requisitos
 - Node.js (v14 ou superior)
