@@ -1,29 +1,65 @@
-# Spotify Copy
+# 🎵 Spotify Clone
 
-Neste projeto é uma aplicação de cópia do Spotify em que foi desenvolvida utilizando **React**, **Vite**, **MongoDB**, **Node.js**, e outras dependências, criando uma interface semelhante à do Spotify para gerenciar e exibir músicas e artistas.
+## 📝 Descrição do Projeto
+Este projeto é uma aplicação web que replica a interface e funcionalidades do Spotify, desenvolvida com tecnologias modernas de desenvolvimento web.
 
-## Tecnologias Utilizadas
+## 🚀 Tecnologias Utilizadas
 
-- **React**: Biblioteca para construção da interface do usuário.
-- **Vite**: Ferramenta de build rápida para desenvolvimento com React.
-- **Node.js**: Ambiente de execução para o back-end, utilizando o Express para a API e para gerenciar o servidor.
-- **MongoDB**: Banco de dados NoSQL para armazenar dados sobre artistas e músicas.
-- **Express**: Framework para o back-end da aplicação, usado para configurar a API.
-- **Axios**: Biblioteca para fazer requisições HTTP.
-  
+### Principais Tecnologias
+- **React**: Biblioteca para construção de interfaces de usuário dinâmicas
+- **Vite**: Ferramenta de build ultra-rápida para desenvolvimento front-end
+- **Node.js**: Ambiente de execução JavaScript para back-end
+- **Express**: Framework web para criação de APIs
+- **MongoDB**: Banco de dados NoSQL para armazenamento de dados
+
+### Bibliotecas e Ferramentas
+- **Axios**: Cliente HTTP para requisições de API
+- **Mongoose**: ODM (Object Data Modeling) para MongoDB
+- **Tailwind CSS**: Framework de estilos utilitário
+
+## 🏗️ Arquitetura do Projeto
+
 ### Front-end
-
-O front-end é responsável pela interface do usuário e interage com a API para exibir dados de músicas e artistas. Ele foi desenvolvido com React e Vite.
+- Desenvolvido com React e Vite
+- Interface responsiva e interativa
+- Comunicação com back-end via Axios
+- Gerenciamento de estado e requisições assíncronas
 
 ### Back-end
+- Servidor construído com Node.js e Express
+- Conexão com MongoDB para persistência de dados
+- Endpoints RESTful para gerenciamento de músicas e artistas
 
-O back-end é responsável por gerenciar a API e fornecer dados para o front-end. Ele foi construído com Express e MongoDB.
+## 🔧 Configuração e Instalação
 
-## Como Rodar o Projeto
+### Pré-requisitos
+- Node.js (v14 ou superior)
+- MongoDB
+- npm ou yarn
 
-Para rodar o projeto localmente, siga os passos abaixo:
+### Passos para Instalação
 
-1. **Clone o repositório:**
-   ```bash
+1. **Clone o repositório**
+   ```
    git clone https://github.com/Loyius/SpotifyCopy.git
    cd SpotifyCopy
+   ```
+
+2. **Instale as dependências**
+   ```
+   # Instalar dependências do back-end
+   npm install --prefix back-end
+
+   # Instalar dependências do front-end
+   npm install --prefix front-end
+   ```
+
+4. **Inicie o servidor back-end**
+   ```
+   npm run start --prefix back-end
+   ```
+
+5. **Inicie o servidor front-end**
+   ```
+   npm run dev --prefix front-end
+   ```
